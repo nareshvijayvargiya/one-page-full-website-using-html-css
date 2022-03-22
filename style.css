@@ -60,6 +60,7 @@ p{
     background-color: transparent;
     border: 2px solid crimson;
     font-size: 2rem;
+    font-weight: 600;
     letter-spacing: .1rem;
     text-transform: uppercase;
     transition: .3s ease;
@@ -68,6 +69,16 @@ p{
 
 .cta:hover{
     background-color: crimson;
+}
+
+.brand h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.brand h1 span{
+    color: crimson;
 }
 
 /* hero section start */
@@ -121,6 +132,11 @@ p{
     padding: 100px 0;
 }
 
+#services .service-top{
+    width: 500px;
+    margin: 0 auto;
+}
+
 #services .service-bottom{
     display: flex;
     align-items: center;
@@ -163,7 +179,7 @@ p{
     height: 100%;
     width: 100%;
     background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-    opacity: 0.8;
+    opacity: 0.9;
     z-index: -1;
 }
 
@@ -321,5 +337,217 @@ p{
 /* about section end */
 
 /* contact section start */
+#contact .contact{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+#contact .contact-items{
+    width: 400px;
+}
+
+#contact .contact-item{
+    width: 80%;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+    transition: .3s ease box-shodow;
+}
+
+#contact .contact-item:hover{
+    box-shadow: 0px 0px 5px 0 #0000002c;
+}
+
+#contact .icon{
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#contact .contact-info h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#contact .contact-info h2{
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
 /* contact section end */
+
+/* footer start */
+#footer{
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+#footer .footer{
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+#footer h2{
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#footer .social-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 22%;
+    margin-bottom: 30px;
+}
+
+#footer .social-item img{
+    filter: grayscale(0);
+    transition: .3s ease filter;
+}
+
+#footer .social-item:hover img{
+    filter: grayscale(1);
+}
+
+#footer p{
+    color: white;
+    font-size: 1.3rem;
+}
+/* footer end */
+
+/* start media query for Teblet */
+@media only screen and (min-width:810px){
+        .cta{
+            font-size: 2.5rem;
+            padding: 20px 60px;
+        }
+
+        .section-tittle{
+            font-size: 6rem;
+        }
+
+        /* start hero section */
+        #hero h1{
+            font-size: 7rem;
+        }
+        /* end hero section */
+
+        /* start service section */
+        #services .service-bottom .service-item{
+            flex-basis: 45%;
+            margin: 2.5%;
+        }
+        /* start service section */
+
+        /* start project section */
+        #projects .projects-item{
+            flex-direction: row;
+            height: 400px;
+            margin: 0;
+            width: 100%;
+            border-radius: 0;
+        }
+
+        #projects .projects-item:nth-child(even){
+            flex-direction: row-reverse;
+        }
+
+        #projects .projects-img{
+            height: 100%;
+        }
+        /* end project section */
+
+        /* start about section */
+        #about .about{
+            flex-direction: row;
+        }
+
+        #about .col-left {
+            width: 600px;
+            height: 400px;
+            padding-left: 60px;
+          }
+
+          #about .col-left .about-img::after{
+            left: -45px;
+            top: 35px;
+            height: 98%;
+            width: 98%;
+            border: 10px solid crimson;
+        }
+
+        #about .col-right{
+            text-align: left;
+            padding: 30px;
+        }
+
+        #about .col-right h1{
+            text-align: left;
+        }
+        /* end about section */
+
+        /* start contact section */
+        #contact .contact{
+            padding: 100px 0;
+            min-width: 20vh;
+        }
+
+        #contact .contact-items{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        #contact .contact-item{
+            margin: 10px;
+            flex-direction: row;
+        }
+
+        #contact .contact-item .icon{
+            height: 100px;
+            width: 100px;
+        }
+
+        #contact .contact-item .icon img{
+            object-fit: contain;
+        }
+
+        #contact .contact-item .contact-info{
+            width: 100%;
+            text-align: left;
+            padding-left: 20px;
+        }
+        /* end contact section */
+}
+/* end media query for Teblet */
+
+/* start media query for Desktop */
+@media only screen and (min-width:1200px){
+        /* start service section     */
+        #services .service-bottom .service-item{
+            flex-basis: 22%;
+            margin: 1.5%;
+        }
+        /* end service section     */
+}
+/* end media query for Desktop */
